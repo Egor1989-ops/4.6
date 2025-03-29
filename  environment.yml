@@ -1,0 +1,4 @@
+name: skillbox_1
+dependencies:
+  - python=3.12
+  - requests
