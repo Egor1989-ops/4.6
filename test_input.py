@@ -3,8 +3,8 @@ from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 
 
-class TestImput:
-    def test_send_keys(self, set_up_browser):
+class Test1:
+    def test_1(self, set_up_browser):
         driver = set_up_browser
         driver.get('https://github.com/microsoft/vscode/issues')
         driver.find_element(By.XPATH, '//button[@id="query-builder-twet-clear-button"]') / click()
@@ -12,7 +12,7 @@ class TestImput:
         pass
 
 
-class Tests:
+class Test2:
     def test_2(self, set_up_browser):
         driver = set_up_browser
         driver.get('https://github.com/microsoft/vscode/issues')
@@ -22,7 +22,7 @@ class Tests:
         pass
 
 
-class Tests:
+class Test3:
     def test_3(self, set_up_browser):
         driver = set_up_browser
         driver.get('https://github.com/microsoft/vscode/issues')
@@ -32,14 +32,27 @@ class Tests:
         pass
 
 
-class TestRadiobutton:
-    def test_radio_button(self, set_up_browser):
-        driver.get('https://skillbox.ru/code/')
-        driver.find_element(By.CSS_SELECTOR, input[value = 'profession']).click()
+class Test4:
+    def test_4(self, set_up_browser):
+        driver = set_up_browser
+        driver.get('https://github.com/microsoft/vscode/graphs/commit-activity')
+        driver.set_window_size(1400, 770)
+        action_chains = webdriver.ActionChains(driver)
+        time.sleep(3)
+        action_chains.move_to_element(driver.find_element(By.XPATH, "//*[@id='commit-activity-master']")).perform()
+        driver.find_element(By.XPATH, '//*[@id="js-repo-pjax-container"]')
         pass
 
-
-class TestSlider:
-    def test_slider(self, set_up_browser):
+class Test5
+    def test_5(self, set_up_browser):
         driver = set_up_browser
         driver.get('https://skillbox.ru/code/')
+        driver.find_element(By.CSS_SELECTOR, input[value = 'profession']).click()
+        driver.find_element(By.CSS_SELECTOR, // span[text()[contains(., "1С")]] / preceding::input[1]).click()
+        el = driver.find_element(By.XPATH //*[contains(@class, 'slider-ltr')])
+        action_chains = webdriver.ActionChains(driver)
+        action_chains.click_and_hold(el)
+            .click_and_hold(el)\
+            .move_by_offset(xoffset=6, yoffset=12)\
+            .perform()
+        pass
