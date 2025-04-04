@@ -40,6 +40,24 @@ class TestRadiobutton:
 
 
 class TestSlider:
+    def test_tooltip(self, set_up_browser):
+        driver = set_up_browser
+        driver.get('https://github.com/microsoft/vscode/graphs/commit-activity')
+        driver.set_window_size(1400, 770)
+        action_chains = webdriver.ActionChains(driver)
+        time.sleep(3)
+        action_chains.move_to_element(driver.find_element(By.XPATH, "//*[@id='commit-activity-master']")).perform()
+        driver.find_element(By.XPATH, '//*[@id="js-repo-pjax-container"]')
+        pass
+
+class TestSlider:
     def test_slider(self, set_up_browser):
         driver = set_up_browser
         driver.get('https://skillbox.ru/code/')
+        el = driver.find_element(By.XPATH //*[contains(@class, 'slider-ltr')])
+        action_chains = webdriver.ActionChains(driver)
+        action_chains.click_and_hold(el)
+            .click_and_hold(el)\
+            .move_by_offset(xoffset=6, yoffset=12)\
+            .perform()
+        pass
