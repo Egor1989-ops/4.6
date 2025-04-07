@@ -43,7 +43,7 @@ class Test4:
         driver.find_element(By.XPATH, '//*[@id="js-repo-pjax-container"]')
         pass
 
-class Test5
+class Test5:
     def test_5(self, set_up_browser):
         driver = set_up_browser
         driver.get('https://skillbox.ru/code/')
